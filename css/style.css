@@ -7,7 +7,7 @@ img { max-width: 100%; display: block; }
 
 /* 2. Design System - Variáveis Globais */
 :root {
-  --cor-primaria: #28a745; --cor-primaria-escura: #218838; --cor-secundaria: #ffc107; --cor-fundo: #f8f9fa; --cor-superficie: #ffffff; --cor-texto-principal: #212529; --cor-texto-secundario: #6c757d; --cor-borda: #dee2e6; --fonte-principal: 'Poppins', sans-serif; --fonte-secundaria: 'Roboto', sans-serif; --tamanho-fonte-xg: 3rem; --tamanho-fonte-g: 2.25rem; --tamanho-fonte-m: 1.5rem; --tamanho-fonte-p: 1rem; --tamanho-fonte-xp: 0.875rem; --espacamento-xp: 8px; --espacamento-p: 16px; --espacamento-m: 24px; --espacamento-g: 32px; --espacamento-xg: 48px; --espacamento-xxg: 64px;
+  --cor-primaria: #28a745; --cor-primaria-escura: #218838; --cor-secundaria: #ffc107; --cor-fundo: #f8f9fa; --cor-superficie: #ffffff; --cor-texto-principal: #212529; --cor-texto-secundario: #6c757d; --cor-borda: #dee2e6; --cor-erro: #dc3545; --cor-fundo-erro: #f8d7da; --fonte-principal: 'Poppins', sans-serif; --fonte-secundaria: 'Roboto', sans-serif; --tamanho-fonte-xg: 3rem; --tamanho-fonte-g: 2.25rem; --tamanho-fonte-m: 1.5rem; --tamanho-fonte-p: 1rem; --tamanho-fonte-xp: 0.875rem; --espacamento-xp: 8px; --espacamento-p: 16px; --espacamento-m: 24px; --espacamento-g: 32px; --espacamento-xg: 48px; --espacamento-xxg: 64px;
 }
 
 /* 3. Estilos do Layout Global COM CSS GRID */
@@ -29,12 +29,9 @@ h3 { font-size: var(--tamanho-fonte-p); }
 p { line-height: 1.6; margin-bottom: var(--espacamento-p); }
 
 /* 4. Componentes */
-/* Menu de Navegação Desktop */
 #menu { display: flex; justify-content: center; gap: var(--espacamento-m); align-items: center; }
 #menu a { color: var(--cor-superficie); font-family: var(--fonte-principal); font-weight: 500; transition: color 0.3s ease; padding: var(--espacamento-xp) 0; }
 #menu a:hover { color: var(--cor-secundaria); }
-
-/* Cards de Projeto */
 #nossos-projetos .cards-container { display: flex; flex-wrap: wrap; gap: var(--espacamento-g); margin-top: var(--espacamento-g); }
 .card { flex: 1 1 300px; background-color: var(--cor-fundo); border: 1px solid var(--cor-borda); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; }
 .card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); }
@@ -45,27 +42,30 @@ p { line-height: 1.6; margin-bottom: var(--espacamento-p); }
 .btn { display: inline-block; background-color: var(--cor-primaria); color: var(--cor-superficie); padding: var(--espacamento-p) var(--espacamento-m); border-radius: 4px; text-align: center; font-family: var(--fonte-principal); font-weight: 500; transition: background-color 0.3s ease; border: none; cursor: pointer; }
 .btn:hover { background-color: var(--cor-primaria-escura); }
 
-/* Formulário */
-form { display: flex; flex-direction: column; gap: var(--espacamento-g); margin-top: var(--espacamento-g); }
-fieldset { border: 1px solid var(--cor-borda); border-radius: 8px; padding: var(--espacamento-m); }
+/* 5. Formulário e Validação Avançada */
+form { display: flex; flex-direction: column; gap: 0; margin-top: var(--espacamento-g); }
+fieldset { border: 1px solid var(--cor-borda); border-radius: 8px; padding: var(--espacamento-m); margin-bottom: var(--espacamento-g); }
 legend { font-family: var(--fonte-principal); font-weight: 700; color: var(--cor-primaria); padding: 0 var(--espacamento-xp); }
-label { display: block; margin-bottom: var(--espacamento-xp); font-weight: 500; margin-top: var(--espacamento-p); }
+.form-control { margin-bottom: var(--espacamento-m); }
+label { display: block; margin-bottom: var(--espacamento-xp); font-weight: 500; }
 input[type="text"], input[type="email"], input[type="date"], input[type="tel"] { width: 100%; padding: var(--espacamento-p); border: 1px solid var(--cor-borda); border-radius: 4px; font-size: var(--tamanho-fonte-p); transition: border-color 0.3s ease, box-shadow 0.3s ease; }
 input:focus { outline: none; border-color: var(--cor-primaria); box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2); }
-.form-actions { display: flex; gap: var(--espacamento-p); margin-top: var(--espacamento-m); }
+.form-actions { display: flex; gap: var(--espacamento-p); }
 .btn-secondary { background-color: var(--cor-texto-secundario); }
 .btn-secondary:hover { background-color: var(--cor-texto-principal); }
+.error-message { color: var(--cor-erro); font-size: var(--tamanho-fonte-xp); margin-top: var(--espacamento-xp); display: none; }
+.form-control.error .error-message { display: block; }
+.form-control.error input { border-color: var(--cor-erro); background-color: var(--cor-fundo-erro); }
 
-/* 5. Responsividade e Menu Hambúrguer */
+/* 6. Responsividade e Menu Hambúrguer */
 #btn-mobile { display: none; }
-
 @media (max-width: 768px) {
   body { grid-template-columns: 1fr; grid-template-areas: "header" "nav" "main" "footer"; }
   nav .container { display: flex; align-items: center; justify-content: space-between; }
   #btn-mobile { display: flex; padding: .5rem 1rem; font-size: 1rem; border: none; background: none; cursor: pointer; gap: .5rem; color: var(--cor-superficie); }
   #hamburger { display: block; border-top: 2px solid; width: 20px; }
   #hamburger::after, #hamburger::before { content: ''; display: block; width: 20px; height: 2px; background: currentColor; margin-top: 5px; transition: .3s; position: relative; }
-  #menu { display: block; position: absolute; width: 100%; top: 65px; left: 0; background: var(--cor-texto-principal); height: 0; transition: height .4s ease-in-out; visibility: hidden; overflow-y: hidden; z-index: 1000; }
+  #menu { display: block; position: absolute; width: 100%; top: 65px; left: 0; background: var(--cor-texto-principal); height: 0; transition: height .4s ease-in-out; visibility: hidden; overflow-y: auto; z-index: 1000; }
   #menu li { padding: 1rem 0; margin: 0 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
   #nav.active #menu { height: calc(100vh - 65px); visibility: visible; }
   #nav.active #hamburger { border-top-color: transparent; }
