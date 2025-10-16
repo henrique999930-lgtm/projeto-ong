@@ -4,50 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONG Semeando o Futuro - Projetos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header>
-        <h1>ONG Semeando o Futuro</h1>
-        <p>Transformando vidas através da educação e da solidariedade.</p>
+        <div class="container">
+            <h1>ONG Semeando o Futuro</h1>
+            <p>Transformando vidas através da educação e da solidariedade.</p>
+        </div>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="projetos.html">Projetos Sociais</a></li>
-            <li><a href="cadastro.html">Seja um Voluntário</a></li>
-        </ul>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos Sociais</a></li>
+                <li><a href="cadastro.html">Seja um Voluntário</a></li>
+            </ul>
+        </div>
     </nav>
 
     <main>
-        <section id="nossos-projetos">
-            <h2>Nossos Projetos em Destaque</h2>
-            <p>Conheça as iniciativas que estão mudando realidades e veja como sua ajuda faz a diferença.</p>
+        <div class="container">
+            <section id="nossos-projetos">
+                <h2>Nossos Projetos em Destaque</h2>
+                <p>Conheça as iniciativas que estão mudando realidades e veja como sua ajuda faz a diferença.</p>
 
-            <article>
-                <h3>Projeto "Ler para Crescer"</h3>
-                <img src="images/projeto-leitura.png" alt="Voluntária lendo livros com um grupo de crianças sentadas em puffs coloridos" width="450">
-                <p>Incentivamos a leitura em comunidades carentes através da criação de bibliotecas comunitárias e oficinas de contação de histórias, abrindo portas para o conhecimento e a imaginação.</p>
-            </article>
+                <div class="cards-container">
+                    
+                    <article class="card">
+                        <img src="images/projeto-leitura.png" alt="Voluntária lendo livros com um grupo de crianças sentadas em puffs coloridos">
+                        <div class="card-content">
+                            <h3>Projeto "Ler para Crescer"</h3>
+                            <p>Incentivamos a leitura em comunidades carentes através da criação de bibliotecas comunitárias e oficinas de contação de histórias.</p>
+                            <a href="#" class="btn">Saiba Mais</a>
+                        </div>
+                    </article>
 
-            <article>
-                <h3>Projeto "Horta Comunitária"</h3>
-                <img src="images/projeto-horta.png" alt="Voluntários e crianças trabalhando em uma horta comunitária" width="450">
-                <p>Capacitamos famílias para cultivar alimentos orgânicos em espaços comunitários, promovendo a segurança alimentar, a geração de renda e a educação ambiental.</p>
-            </article>
-        </section>
+                    <article class="card">
+                        <img src="images/projeto-horta.png" alt="Voluntários e crianças trabalhando em uma horta comunitária">
+                        <div class="card-content">
+                            <h3>Projeto "Horta Comunitária"</h3>
+                            <p>Capacitamos famílias para cultivar alimentos orgânicos, promovendo a segurança alimentar, a geração de renda e a educação ambiental.</p>
+                            <a href="#" class="btn">Saiba Mais</a>
+                        </div>
+                    </article>
 
-        <section id="como-ajudar">
-            <h2>Como Você Pode Ajudar?</h2>
-            <p>Seu apoio é fundamental. Você pode se tornar um voluntário em um de nossos projetos ou fazer uma doação para nos ajudar a continuar nosso trabalho.</p>
-            <p><strong><a href="cadastro.html">Clique aqui para se cadastrar como voluntário!</a></strong></p>
-        </section>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 ONG Semeando o Futuro. Todos os direitos reservados.</p>
-        <p>Contato: contato@semeandoofuturo.org</p>
+        <div class="container">
+            <p>&copy; 2025 ONG Semeando o Futuro. Todos os direitos reservados.</p>
+            <p>Contato: contato@semeandoofuturo.org</p>
+        </div>
     </footer>
 
 </body>
