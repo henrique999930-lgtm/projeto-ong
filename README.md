@@ -6,7 +6,7 @@
 
 ## 🎯 Sobre o Projeto
 
-Este projeto representa a fundação de uma plataforma web completa, desenvolvida como solução para a atividade acadêmica de **Experiências Práticas**. O desafio consistiu em aplicar conceitos fundamentais de desenvolvimento front-end para criar um portal funcional e bem-estruturado para uma ONG fictícia, focando em semântica, acessibilidade e organização de código.
+[cite_start]Este projeto representa a fundação de uma plataforma web completa, desenvolvida como solução para a atividade acadêmica de **Experiências Práticas** do curso de **Ciência da Computação**[cite: 33]. O desafio consistiu em aplicar conceitos fundamentais de desenvolvimento front-end para criar um portal funcional e bem-estruturado para uma ONG fictícia, focando em semântica, acessibilidade e organização de código.
 
 <p align="center">
   <img src="https://img.shields.io/badge/W3C-HTML5%20VALID-orange?style=for-the-badge&logo=w3c" alt="HTML5 Válido">
@@ -46,7 +46,7 @@ Para visualizar o projeto em sua máquina local, siga os passos abaixo:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/seu-nome-de-usuario/projeto-ong.git](https://github.com/seu-nome-de-usuario/projeto-ong.git)
+    git clone [https://github.com/henrique999930-1gtm/projeto-ong.git](https://github.com/henrique999930-1gtm/projeto-ong.git)
     ```
 2.  **Navegue até o diretório do projeto:**
     ```bash
@@ -59,7 +59,7 @@ Para visualizar o projeto em sua máquina local, siga os passos abaixo:
 
 ## 👨‍💻 Autor
 
-Desenvolvido com dedicação por **[SEU NOME COMPLETO AQUI]**.
+[cite_start]Desenvolvido com dedicação por **Carlos Henrique Dias Dos Santos**[cite: 1].
 
-* **LinkedIn:** [linkedin.com/in/seu-usuario](https://www.linkedin.com/in/seu-usuario)
-* **GitHub:** [@seu-usuario](https://github.com/seu-usuario)
+* [cite_start]**LinkedIn:** [linkedin.com/in/carlos-henrique-2a0008378](https://linkedin.com/in/carlos-henrique-2a0008378) [cite: 5]
+* [cite_start]**GitHub:** [@henrique999930-1gtm](https://github.com/henrique999930-1gtm) [cite: 5]
