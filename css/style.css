@@ -1,305 +1,74 @@
-/* 1. Reset de CSS Profissional (CSS Reset) */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
-}
-
-ul, ol {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
+/* 1. Reset de CSS Profissional */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body, input, label, button, legend { font-family: 'Roboto', sans-serif; }
+ul, ol { list-style: none; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
 
 /* 2. Design System - Variáveis Globais */
 :root {
-  /* Paleta de Cores */
-  --cor-primaria: #28a745;
-  --cor-primaria-escura: #218838;
-  --cor-secundaria: #ffc107;
-  --cor-fundo: #f8f9fa;
-  --cor-superficie: #ffffff;
-  --cor-texto-principal: #212529;
-  --cor-texto-secundario: #6c757d;
-  --cor-borda: #dee2e6;
-
-  /* Tipografia */
-  --fonte-principal: 'Poppins', sans-serif;
-  --fonte-secundaria: 'Roboto', sans-serif;
-  --tamanho-fonte-xg: 3rem;
-  --tamanho-fonte-g: 2.25rem;
-  --tamanho-fonte-m: 1.5rem;
-  --tamanho-fonte-p: 1rem;
-  --tamanho-fonte-xp: 0.875rem;
-
-  /* Espaçamentos Modulares */
-  --espacamento-xp: 8px;
-  --espacamento-p: 16px;
-  --espacamento-m: 24px;
-  --espacamento-g: 32px;
-  --espacamento-xg: 48px;
-  --espacamento-xxg: 64px;
+  --cor-primaria: #28a745; --cor-primaria-escura: #218838; --cor-secundaria: #ffc107; --cor-fundo: #f8f9fa; --cor-superficie: #ffffff; --cor-texto-principal: #212529; --cor-texto-secundario: #6c757d; --cor-borda: #dee2e6; --fonte-principal: 'Poppins', sans-serif; --fonte-secundaria: 'Roboto', sans-serif; --tamanho-fonte-xg: 3rem; --tamanho-fonte-g: 2.25rem; --tamanho-fonte-m: 1.5rem; --tamanho-fonte-p: 1rem; --tamanho-fonte-xp: 0.875rem; --espacamento-xp: 8px; --espacamento-p: 16px; --espacamento-m: 24px; --espacamento-g: 32px; --espacamento-xg: 48px; --espacamento-xxg: 64px;
 }
 
-/* Estilos Globais do Body */
-body {
-  font-family: var(--fonte-secundaria);
-  font-size: var(--tamanho-fonte-p);
-  color: var(--cor-texto-principal);
-  background-color: var(--cor-fundo);
-}
-/* 3. Estilos do Layout Global */
-
-/* Container para centralizar o conteúdo */
-.container {
-  max-width: 1100px; /* Largura máxima do conteúdo */
-  margin: 0 auto; /* Centraliza o container na página */
-  padding: 0 var(--espacamento-p); /* Espaçamento lateral para não colar nas bordas */
-}
-
-/* Estilização do Cabeçalho */
-header {
-  background-color: var(--cor-superficie);
-  padding: var(--espacamento-m) 0;
-  text-align: center;
-  border-bottom: 1px solid var(--cor-borda);
-}
-
-/* Estilização da Navegação Principal */
-nav {
-  background-color: var(--cor-primaria);
-  padding: var(--espacamento-p) 0;
-}
-
-nav ul {
-  display: flex; /* Alinha os itens do menu na horizontal */
-  justify-content: center; /* Centraliza os itens */
-  gap: var(--espacamento-m); /* Espaço entre os itens do menu */
-}
-
-nav ul a {
-  color: var(--cor-superficie);
-  font-family: var(--fonte-principal);
-  font-weight: 500;
-  transition: color 0.3s ease; /* Efeito suave de transição */
-}
-
-nav ul a:hover {
-  color: var(--cor-secundaria); /* Muda de cor ao passar o mouse */
-}
-
-/* Estilização do Conteúdo Principal */
-main {
-  padding: var(--espacamento-xg) 0; /* Espaçamento vertical generoso */
-}
-
-section {
-  background-color: var(--cor-superficie);
-  padding: var(--espacamento-g);
-  border-radius: 8px; /* Bordas arredondadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra suave */
-  margin-bottom: var(--espacamento-g);
-}
-
-/* Estilização do Rodapé */
-footer {
-  background-color: var(--cor-texto-principal);
-  color: var(--cor-fundo);
-  text-align: center;
-  padding: var(--espacamento-m) 0;
-}
-
-/* Estilização da Tipografia (Títulos) */
-h1, h2, h3 {
-  font-family: var(--fonte-principal);
-  font-weight: 700;
-  margin-bottom: var(--espacamento-p);
-}
-
+/* 3. Estilos do Layout Global COM CSS GRID */
+body { font-size: var(--tamanho-fonte-p); color: var(--cor-texto-principal); background-color: var(--cor-fundo); display: grid; grid-template-columns: 1fr min(1100px, 95%) 1fr; grid-template-rows: auto auto 1fr auto; grid-template-areas: ". header ." "nav nav nav" ". main ." "footer footer footer"; min-height: 100vh; }
+header { grid-area: header; }
+nav { grid-area: nav; }
+main { grid-area: main; }
+footer { grid-area: footer; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 var(--espacamento-p); width: 100%; }
+header { background-color: var(--cor-superficie); padding: var(--espacamento-m) 0; text-align: center; border-bottom: 1px solid var(--cor-borda); }
+nav { background-color: var(--cor-primaria); padding: var(--espacamento-p) 0; position: relative; }
+main { padding: var(--espacamento-xg) 0; }
+section { background-color: var(--cor-superficie); padding: var(--espacamento-g); border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); margin-bottom: var(--espacamento-g); }
+footer { background-color: var(--cor-texto-principal); color: var(--cor-fundo); text-align: center; padding: var(--espacamento-m) 0; }
+h1, h2, h3 { font-family: var(--fonte-principal); font-weight: 700; margin-bottom: var(--espacamento-p); }
 h1 { font-size: var(--tamanho-fonte-g); }
 h2 { font-size: var(--tamanho-fonte-m); color: var(--cor-primaria); }
 h3 { font-size: var(--tamanho-fonte-p); }
+p { line-height: 1.6; margin-bottom: var(--espacamento-p); }
 
-p {
-  line-height: 1.6; /* Melhora a legibilidade do texto */
-  margin-bottom: var(--espacamento-p);
-}
-/* 4. Estilos Específicos - Página de Projetos (Cards) */
+/* 4. Componentes */
+/* Menu de Navegação Desktop */
+#menu { display: flex; justify-content: center; gap: var(--espacamento-m); align-items: center; }
+#menu a { color: var(--cor-superficie); font-family: var(--fonte-principal); font-weight: 500; transition: color 0.3s ease; padding: var(--espacamento-xp) 0; }
+#menu a:hover { color: var(--cor-secundaria); }
 
-/* Container para os cards */
-#nossos-projetos .cards-container {
-  display: flex; /* Ativa o Flexbox */
-  flex-wrap: wrap; /* Permite que os cards quebrem para a linha de baixo */
-  gap: var(--espacamento-g); /* Espaço entre os cards */
-  margin-top: var(--espacamento-g);
-}
+/* Cards de Projeto */
+#nossos-projetos .cards-container { display: flex; flex-wrap: wrap; gap: var(--espacamento-g); margin-top: var(--espacamento-g); }
+.card { flex: 1 1 300px; background-color: var(--cor-fundo); border: 1px solid var(--cor-borda); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); }
+.card img { width: 100%; height: 200px; object-fit: cover; }
+.card-content { padding: var(--espacamento-m); display: flex; flex-direction: column; flex-grow: 1; }
+.card-content h3 { margin-bottom: var(--espacamento-p); }
+.card-content p { flex-grow: 1; margin-bottom: var(--espacamento-m); }
+.btn { display: inline-block; background-color: var(--cor-primaria); color: var(--cor-superficie); padding: var(--espacamento-p) var(--espacamento-m); border-radius: 4px; text-align: center; font-family: var(--fonte-principal); font-weight: 500; transition: background-color 0.3s ease; border: none; cursor: pointer; }
+.btn:hover { background-color: var(--cor-primaria-escura); }
 
-/* Estilo individual de cada card */
-.card {
-  flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis: Mágica da responsividade! */
-  background-color: var(--cor-fundo);
-  border: 1px solid var(--cor-borda);
-  border-radius: 8px;
-  overflow: hidden; /* Garante que a imagem não vaze das bordas arredondadas */
-  display: flex;
-  flex-direction: column; /* Organiza o conteúdo do card na vertical */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+/* Formulário */
+form { display: flex; flex-direction: column; gap: var(--espacamento-g); margin-top: var(--espacamento-g); }
+fieldset { border: 1px solid var(--cor-borda); border-radius: 8px; padding: var(--espacamento-m); }
+legend { font-family: var(--fonte-principal); font-weight: 700; color: var(--cor-primaria); padding: 0 var(--espacamento-xp); }
+label { display: block; margin-bottom: var(--espacamento-xp); font-weight: 500; margin-top: var(--espacamento-p); }
+input[type="text"], input[type="email"], input[type="date"], input[type="tel"] { width: 100%; padding: var(--espacamento-p); border: 1px solid var(--cor-borda); border-radius: 4px; font-size: var(--tamanho-fonte-p); transition: border-color 0.3s ease, box-shadow 0.3s ease; }
+input:focus { outline: none; border-color: var(--cor-primaria); box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2); }
+.form-actions { display: flex; gap: var(--espacamento-p); margin-top: var(--espacamento-m); }
+.btn-secondary { background-color: var(--cor-texto-secundario); }
+.btn-secondary:hover { background-color: var(--cor-texto-principal); }
 
-.card:hover {
-  transform: translateY(-5px); /* Efeito de levantar o card */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
+/* 5. Responsividade e Menu Hambúrguer */
+#btn-mobile { display: none; }
 
-.card img {
-  width: 100%;
-  height: 200px; /* Altura fixa para as imagens */
-  object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
-}
-
-.card-content {
-  padding: var(--espacamento-m);
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1; /* Faz o conteúdo ocupar o espaço restante */
-}
-
-.card-content h3 {
-  margin-bottom: var(--espacamento-p);
-}
-
-.card-content p {
-  flex-grow: 1; /* Empurra o botão para o final do card */
-  margin-bottom: var(--espacamento-m);
-}
-
-/* Estilo para botões dentro dos cards */
-.btn {
-  display: inline-block;
-  background-color: var(--cor-primaria);
-  color: var(--cor-superficie);
-  padding: var(--espacamento-xp) var(--espacamento-m);
-  border-radius: 4px;
-  text-align: center;
-  font-family: var(--fonte-principal);
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: var(--cor-primaria-escura);
-}
-/* 5. Estilos Específicos - Página de Cadastro (Formulário) */
-
-#formulario-cadastro form {
-  display: flex;
-  flex-direction: column; /* Organiza os fieldsets em coluna */
-  gap: var(--espacamento-g);
-}
-
-fieldset {
-  border: 1px solid var(--cor-borda);
-  border-radius: 8px;
-  padding: var(--espacamento-m);
-}
-
-legend {
-  font-family: var(--fonte-principal);
-  font-weight: 700;
-  color: var(--cor-primaria);
-  padding: 0 var(--espacamento-xp);
-}
-
-label {
-  display: block; /* Faz o label ocupar a linha inteira */
-  margin-bottom: var(--espacamento-xp);
-  font-weight: 500;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="date"],
-input[type="tel"] {
-  width: 100%; /* Ocupa toda a largura disponível */
-  padding: var(--espacamento-p);
-  border: 1px solid var(--cor-borda);
-  border-radius: 4px;
-  font-size: var(--tamanho-fonte-p);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Efeito de foco: quando o usuário clica no campo */
-input:focus {
-  outline: none; /* Remove a borda padrão do navegador */
-  border-color: var(--cor-primaria);
-  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2);
-}
-
-/* Estilo para os botões do formulário */
-.form-actions {
-  display: flex;
-  gap: var(--espacamento-p);
-}
-
-.btn-secondary {
-  background-color: var(--cor-texto-secundario);
-}
-
-.btn-secondary:hover {
-  background-color: var(--cor-texto-principal);
-}
-/* 6. Responsividade (Media Queries) */
-/* Este é o código que faz o site se adaptar a diferentes tamanhos de tela. */
-
-/* Breakpoint para tablets e telas menores (até 768px) */
 @media (max-width: 768px) {
-  :root {
-    /* Diminui o tamanho das fontes em telas menores */
-    --tamanho-fonte-g: 2rem;
-    --tamanho-fonte-m: 1.25rem;
-  }
-
-  nav ul {
-    /* (Ainda não é o menu hambúrguer, apenas ajusta o espaçamento) */
-    gap: var(--espacamento-p);
-    justify-content: space-around;
-  }
-
-  .card {
-    /* Garante que os cards ocupem a largura total em telas menores */
-    flex-basis: 100%;
-  }
-}
-
-/* Breakpoint para celulares (até 576px) */
-@media (max-width: 576px) {
-  main {
-    padding: var(--espacamento-g) 0; /* Diminui o espaçamento vertical */
-  }
-
-  section {
-    padding: var(--espacamento-m); /* Diminui o padding das seções */
-  }
-
-  .form-actions {
-    flex-direction: column; /* Botões do formulário um embaixo do outro */
-  }
-
-  /* Ajustes finais para a tipografia */
-  h1 { font-size: 1.75rem; }
-  h2 { font-size: 1.125rem; }
-  
-  footer {
-    padding: var(--espacamento-p);
-    font-size: var(--tamanho-fonte-xp);
-  }
+  body { grid-template-columns: 1fr; grid-template-areas: "header" "nav" "main" "footer"; }
+  nav .container { display: flex; align-items: center; justify-content: space-between; }
+  #btn-mobile { display: flex; padding: .5rem 1rem; font-size: 1rem; border: none; background: none; cursor: pointer; gap: .5rem; color: var(--cor-superficie); }
+  #hamburger { display: block; border-top: 2px solid; width: 20px; }
+  #hamburger::after, #hamburger::before { content: ''; display: block; width: 20px; height: 2px; background: currentColor; margin-top: 5px; transition: .3s; position: relative; }
+  #menu { display: block; position: absolute; width: 100%; top: 65px; left: 0; background: var(--cor-texto-principal); height: 0; transition: height .4s ease-in-out; visibility: hidden; overflow-y: hidden; z-index: 1000; }
+  #menu li { padding: 1rem 0; margin: 0 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+  #nav.active #menu { height: calc(100vh - 65px); visibility: visible; }
+  #nav.active #hamburger { border-top-color: transparent; }
+  #nav.active #hamburger::before { transform: rotate(135deg); }
+  #nav.active #hamburger::after { transform: rotate(-135deg); top: -7px; }
 }
