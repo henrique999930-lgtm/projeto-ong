@@ -6,43 +6,42 @@
 
 ## 🎯 Sobre o Projeto
 
-[cite_start]Este projeto representa a fundação de uma plataforma web completa, desenvolvida como solução para a atividade acadêmica de **Experiências Práticas** do curso de **Ciência da Computação**[cite: 33]. O desafio consistiu em aplicar conceitos fundamentais de desenvolvimento front-end para criar um portal funcional e bem-estruturado para uma ONG fictícia, focando em semântica, acessibilidade e organização de código.
+[cite_start]Este projeto foi desenvolvido como parte da atividade acadêmica de **Experiências Práticas** do curso de **Ciência da Computação**. [cite: 33] O desafio foi dividido em duas fases:
+
+1.  **Estruturação (HTML5):** Criação da base semântica do site, focando na organização correta do conteúdo.
+2.  **Estilização e Responsividade (CSS3):** Aplicação de um design system completo para transformar a estrutura HTML em uma interface visualmente atraente, profissional e totalmente responsiva para múltiplos dispositivos.
 
 <p align="center">
   <img src="https://img.shields.io/badge/W3C-HTML5%20VALID-orange?style=for-the-badge&logo=w3c" alt="HTML5 Válido">
+  <img src="https://img.shields.io/badge/CSS3-Modern%20Styling-blue?style=for-the-badge&logo=css3" alt="CSS3 Estilizado">
 </p>
 
 ---
 
-## ✨ Funcionalidades Principais
+## ✨ Funcionalidades e Componentes de Destaque
 
-O site é composto por três páginas essenciais que formam o núcleo da experiência do usuário:
-
-* 🏛️ **Página Institucional (`index.html`):**
-    * Apresenta a ONG, sua missão, visão e valores.
-    * Serve como o principal ponto de contato e boas-vindas.
-
-* 🤝 **Página de Projetos (`projetos.html`):**
-    * Exibe os projetos sociais em andamento com descrições e imagens.
-    * Inclui uma chamada para ação (CTA) clara, convidando os visitantes a se envolverem.
-
-* 📝 **Página de Cadastro (`cadastro.html`):**
-    * Um formulário completo e interativo para o cadastro de novos voluntários.
-    * Implementa validação de dados nativa do HTML5 para garantir a integridade das informações.
+* **Design System Robusto:** Implementado com Variáveis CSS (`:root`) para garantir consistência global em cores, fontes e espaçamentos, facilitando a manutenção e a escalabilidade do design.
+* **Layout Responsivo (Mobile-First):** Utilizando Flexbox e Media Queries, o site se adapta perfeitamente a desktops, tablets e smartphones.
+* **Componentes de UI Modernos:**
+    * **Cards de Projeto:** Sistema de cards interativos com efeitos de `hover` para exibir os projetos de forma organizada.
+    * **Formulários Estilizados:** Interface de formulário limpa e intuitiva com feedback visual nos estados de `focus`, melhorando a usabilidade.
 
 ---
 
 ## 🛠️ Tecnologias e Ferramentas
 
-Este projeto foi construído utilizando exclusivamente as tecnologias fundamentais da web, demonstrando a solidez e a importância de uma base bem-feita.
+Este projeto foi construído utilizando as tecnologias fundamentais da web, com foco nas melhores práticas de desenvolvimento front-end.
 
-* **HTML5:** Utilizado para a marcação e estruturação semântica de todo o conteúdo, garantindo acessibilidade e otimização para motores de busca (SEO).
+* **HTML5:** Utilizado para a marcação e estruturação semântica de todo o conteúdo.
+* **CSS3:** Utilizado para toda a camada de apresentação, incluindo:
+    * **Variáveis CSS (Custom Properties)**
+    * **Flexbox** para alinhamento de componentes
+    * **CSS Reset** para consistência entre navegadores
+    * **Media Queries** para a implementação do design responsivo
 
 ---
 
 ## 🚀 Como Executar o Projeto Localmente
-
-Para visualizar o projeto em sua máquina local, siga os passos abaixo:
 
 1.  **Clone o repositório:**
     ```bash
@@ -53,13 +52,12 @@ Para visualizar o projeto em sua máquina local, siga os passos abaixo:
     cd projeto-ong
     ```
 3.  **Abra o arquivo `index.html` no seu navegador de preferência.**
-    * Não é necessário instalar nenhuma dependência. O projeto é composto apenas por arquivos estáticos.
 
 ---
 
 ## 👨‍💻 Autor
 
-[cite_start]Desenvolvido com dedicação por **Carlos Henrique Dias Dos Santos**[cite: 1].
+[cite_start]Desenvolvido com dedicação por **Carlos Henrique Dias Dos Santos**. [cite: 1]
 
 * [cite_start]**LinkedIn:** [linkedin.com/in/carlos-henrique-2a0008378](https://linkedin.com/in/carlos-henrique-2a0008378) [cite: 5]
 * [cite_start]**GitHub:** [@henrique999930-1gtm](https://github.com/henrique999930-1gtm) [cite: 5]
